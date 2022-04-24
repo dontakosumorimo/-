@@ -8,17 +8,12 @@
             <h1><a href="/">donta's blog</a></h1>
         </div>
 
-
+    {% for post in posts %}
         <div>
-            <p>published: 22.04.23, 15:12</p>
-            <h2><a href="">My first post</a></h2>
-            <p>л　Ψ　コングルゥ ★よろしこ★</p>
+            <p>published: {{ post.publshed_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text| linebreaksbr }}</p>
         </div>
-
-        <div>
-            <p>公開日:2022/4/44444 154:556</p>
-            <h2><a href="">二番目の投稿</a></h2>
-            <p>オッスオッス</p>
-        </div>
+    {% endfor %}
     </body>
 </html>
